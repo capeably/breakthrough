@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <title>Breakthrough</title>
+  <link rel="icon" href="data:,">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="frame">
+    <canvas id="game" width="1280" height="720"></canvas>
+
+    <div id="screen-title" class="overlay">
+      <h1 class="logo">BREAKTHROUGH</h1>
+      <p class="tagline">a brick-breaker about breaking through</p>
+      <button class="btn btn-primary" id="btn-continue-run">CONTINUE</button>
+      <button class="btn" id="btn-start">NEW RUN</button>
+      <button class="btn" id="btn-chapters">CHAPTERS</button>
+      <button class="btn" id="btn-settings">SETTINGS</button>
+      <p class="hint">move: mouse / touch / &larr; &rarr; &nbsp;&middot;&nbsp; launch &amp; fire: click or space &nbsp;&middot;&nbsp; pause: P &nbsp;&middot;&nbsp; mute: M</p>
+    </div>
+
+    <div id="screen-chapters" class="overlay hidden">
+      <h2 class="heading">CHAPTERS</h2>
+      <div id="chapter-cards"></div>
+      <button class="btn" id="btn-chapters-back">BACK</button>
+    </div>
+
+    <div id="screen-settings" class="overlay hidden">
+      <h2 class="heading">SETTINGS</h2>
+      <div class="settings-grid">
+        <label class="setting">
+          <span>Volume</span>
+          <input type="range" id="set-volume" min="0" max="100" step="5">
+        </label>
+        <label class="setting">
+          <span>Music</span>
+          <input type="checkbox" id="set-music">
+        </label>
+        <label class="setting">
+          <span>Screen shake</span>
+          <input type="checkbox" id="set-shake">
+        </label>
+        <label class="setting">
+          <span>Reduced flash</span>
+          <input type="checkbox" id="set-reducedFlash">
+        </label>
+        <label class="setting">
+          <span>CRT garnish</span>
+          <input type="checkbox" id="set-crt">
+        </label>
+        <label class="setting">
+          <span>Paddle assist (+25%)</span>
+          <input type="checkbox" id="set-assist">
+        </label>
+      </div>
+      <button class="btn" id="btn-settings-back">BACK</button>
+    </div>
+
+    <div id="screen-pause" class="overlay hidden">
+      <h2 class="heading">PAUSED</h2>
+      <button class="btn btn-primary" id="btn-resume">RESUME</button>
+      <button class="btn" id="btn-pause-settings">SETTINGS</button>
+      <button class="btn" id="btn-restart">RESTART RUN</button>
+      <button class="btn" id="btn-quit">TITLE</button>
+    </div>
+
+    <div id="screen-clear" class="overlay hidden">
+      <h2 class="heading" id="clear-title">LEVEL CLEAR</h2>
+      <p class="sub" id="clear-sub"></p>
+      <p class="badge hidden" id="clear-best">★ NEW BEST ★</p>
+      <p class="stat" id="clear-score"></p>
+      <button class="btn btn-primary" id="btn-continue">CONTINUE</button>
+      <button class="btn hidden" id="btn-clear-quit">TITLE</button>
+    </div>
+
+    <div id="screen-gameover" class="overlay hidden">
+      <h2 class="heading">REST &amp; RETRY.</h2>
+      <p class="sub">The wall wins this round.</p>
+      <p class="badge hidden" id="go-best">★ NEW BEST ★</p>
+      <p class="stat" id="go-score"></p>
+      <button class="btn btn-primary" id="btn-retry">RETRY</button>
+      <button class="btn" id="btn-go-title">TITLE</button>
+    </div>
+  </div>
+
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

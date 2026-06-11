@@ -1,0 +1,14 @@
+# Private working notes — NEVER published.
+# Contains personal productivity context (coach dump, personalization docs)
+# and the design doc. Excluded entirely from version control.
+_Workbench/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*~
+
+# Dependencies (none today — no build step — but just in case)
+node_modules/
